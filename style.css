@@ -1,0 +1,205 @@
+/* Importar Poppins-Bold.ttf */
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('assets/fonts/Poppins-Bold.ttf') format('truetype');
+  }
+  
+  /* Importar Poppins-BoldItalic.ttf */
+  @font-face {
+    font-family: 'Poppins-BoldItalic';
+    src: url('assets/fonts/Poppins-BoldItalic.ttf') format('truetype');
+  }
+  
+  /* Importar Poppins-ExtraBold.ttf */
+  @font-face {
+    font-family: 'Poppins-ExtraBold';
+    src: url('assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  }
+  
+  /* Importar Poppins-Regular.ttf */
+  @font-face {
+    font-family: 'Poppins-Regular';
+    src: url('assets/fonts/Poppins-Regular.ttf') format('truetype');
+  }
+  
+  /* Importar Poppins-ExtraBoldItalic.ttf */
+  @font-face {
+    font-family: 'Poppins-ExtraBoldItalic';
+    src: url('assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+  }
+  
+  /* Importar Poppins-Italic.ttf */
+  @font-face {
+    font-family: 'Poppins-Italic';
+    src: url('assets/fonts/Poppins-Italic.ttf') format('truetype');
+  }
+  
+
+:root{
+    --purple : hsl(259, 100%, 65%);
+    --lightRed: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --offWhite: hsl(0, 0%, 94%);
+    --lightGrey: hsl(0, 0%, 86%);
+    --smokeyGrey: hsl(0, 1%, 44%);
+    --offBlack: hsl(0, 0%, 8%);    
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    background: var(--lightGrey);
+}
+.container{    
+    padding-top: 90px;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+.card{
+    width: auto;
+    padding: 50px 20px;
+    background: var(--white);
+    border-radius: 5px 5px 60px 10px;
+    margin: 0 auto;
+    max-width: 90%;
+    overflow: hidden;
+}
+.grid{    
+    display: flex;
+}
+.form-group{
+    width: 33.33%;
+    padding: 0 10px 0 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form-group label{
+    font-size: 14px;
+    color: var(--smokeyGrey);
+    text-transform: uppercase;
+    letter-spacing: 2.7PX;
+    font-weight: 800;
+    padding-bottom: 5px;
+}
+
+.form-group input{
+    padding: 15px;
+    height: 50px;
+    width: 80px;
+    border: 1px solid var(--lightGrey);
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Poppins-Bold', sans-serif;
+    caret-color: var(--purple);
+}
+.form-group input:active{
+    outline: 1px solid var(--purple);
+    
+}
+.red{
+    color: var(--lightRed) !important;
+}
+
+.red-outline{
+    outline: 1px solid var(--lightRed) !important;
+}
+.error{
+    color: var(--lightRed) !important;
+    font-size: 14px;
+    font-family: 'Poppins-Italic';
+}
+
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    font-size: 53px;
+    font-weight: 800;
+    font-family: 'Poppins-ExtraBoldItalic';
+    gap: 0;
+
+}
+
+.number{
+    color: var(--purple);
+}
+
+.separator{
+    position: relative;
+    padding: 65px 0;
+    width: 100%;
+}
+.separator hr{
+    height: 1px;
+    background: var(--lightGrey);
+    border: none;
+}
+.icon{
+    position: absolute;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: var(--purple);
+    border: 0;
+}
+.icon:hover{
+    cursor: pointer;
+}
+.icon:active{
+    background-color: var(--offBlack);
+}
+.icon img{
+    width: 40%;
+}
+.item{
+    padding: 0;
+    margin: 0;
+}
+@media (min-width:750px){
+    .container{
+        padding-top: 150px;
+    }
+    .card{
+        width: 58%;
+        padding: 50px 55px; 
+        border-radius: 20px 20px 200px 20px;       
+    }
+    .content{
+        font-size: 80px;
+    }
+    .form-group input{    
+        padding: 15px;
+        height: 70px;
+        width: 155px;
+        font-size: 32px;
+    }
+    .icon{
+        top: calc(50% - 32px);
+        left: calc(100% - 32px);
+    }
+    
+}
+
+@media (min-width:1024px) {
+    .content{
+        font-size: 100px;
+    }
+
+    
+}
